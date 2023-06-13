@@ -14,7 +14,7 @@ export const typeDefs= `#graphql
     }
 
     type Mutation{
-        addTweet(user: String, tweet: String, favorite:Boolean): Tweets
+        addTweet(user: String, tweet: String, favorite:Boolean, fecha:String, hora:String): Tweets
         updateTweet(id: ID, tweet: String): Tweets
         deleteTweet(id: ID): Tweets
         updateFavorites(id: ID, favorite:Boolean): Tweets

@@ -6,8 +6,8 @@ export const resolvers ={
         favoritos: async () => await tweets.find({ favorite: true })
     },
     Mutation:{
-        addTweet: async (_, {user,tweet,favorite}) =>{
-            const newTweet = new tweets({user,tweet,favorite})
+        addTweet: async (_, {user,tweet,favorite,fecha,hora}) =>{
+            const newTweet = new tweets({user,tweet,favorite,fecha,hora})
             await newTweet.save()
             return newTweet
         },
