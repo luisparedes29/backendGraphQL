@@ -10,7 +10,7 @@ export const typeDefs= `#graphql
     }
 
     type Query{
-        tweets: [Tweets]
+        tweets: [Tweets], favoritos: [Tweets]
     }
 
     type Mutation{

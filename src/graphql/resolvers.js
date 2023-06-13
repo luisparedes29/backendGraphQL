@@ -2,7 +2,8 @@ import tweets from "../models/tweets.js"
 
 export const resolvers ={
     Query: {
-        tweets: async () => await tweets.find()
+        tweets: async () => await tweets.find(),
+        favoritos: async () => await tweets.find({ favorite: true })
     },
     Mutation:{
         addTweet: async (_, {user,tweet,favorite}) =>{
