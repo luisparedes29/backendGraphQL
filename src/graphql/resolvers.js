@@ -1,5 +1,4 @@
 import tweets from "../models/tweets.js"
-import mongoose from "mongoose"
 
 export const resolvers ={
     Query: {
@@ -22,6 +21,6 @@ export const resolvers ={
         updateFavorites: async(_, {id, favorite}) => {
             const updateFavorites = await tweets.findByIdAndUpdate(id, { favorite }, { new: true })
             return updateFavorites
-        } 
+        }
     }
 }
