@@ -5,8 +5,8 @@ export const typeDefs= `#graphql
         user: String
         tweet: String
         favorite: Boolean
-        createdAt: String
-        updatedAt: String
+        fecha: String
+        hora: String
     }
 
     type Query{
