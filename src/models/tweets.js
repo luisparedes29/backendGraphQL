@@ -6,7 +6,7 @@ const TweetsSchema = new mongoose.Schema(
             type: String,
         },
         favorite: {
-            type: String,
+            type: Boolean,
         },
     },
     {
