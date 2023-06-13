@@ -2,6 +2,9 @@ import mongoose from 'mongoose';
 
 const TweetsSchema = new mongoose.Schema(
     {
+        user:{
+            type: String
+        },
         tweet: {
             type: String,
         },
