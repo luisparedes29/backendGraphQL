@@ -5,16 +5,19 @@ export const typeDefs= `#graphql
         user: String
         tweet: String
         favorite: Boolean
-        createdAt: String
-        updatedAt: String
+        fecha: String
+        hora: String
     }
 
     type Query{
-        tweets: [Tweets]
+        tweets: [Tweets], favoritos: [Tweets]
     }
 
     type Mutation{
-        addTweet(user: String, tweet: String, favorite:Boolean): Tweets
+        addTweet(user: String, tweet: String, favorite:Boolean, fecha:String, hora:String): Tweets
+        updateTweet(id: ID, tweet: String): Tweets
+        deleteTweet(id: ID): Tweets
+        updateFavorites(id: ID, favorite:Boolean): Tweets
     }
 
 `;

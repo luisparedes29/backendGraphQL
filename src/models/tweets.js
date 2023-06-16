@@ -11,6 +11,13 @@ const TweetsSchema = new mongoose.Schema(
         favorite: {
             type: Boolean,
         },
+        fecha: {
+            type: String,
+        },
+        hora: {
+            type: String,
+        }
+
     },
     {
         timestamps: true,
